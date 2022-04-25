@@ -1,0 +1,14 @@
+final : dep1 dep2
+	echo DONE
+dep1 : dep5 dep6
+	echo 1
+dep2 : dep3 dep4
+	echo 2
+dep5 : dep4 
+	echo 5
+dep6 : 
+	echo 6
+dep4 : 
+	echo 4
+dep3 : dep5 dep6
+	echo 3

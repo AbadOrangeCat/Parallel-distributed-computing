@@ -1,0 +1,14 @@
+aa.out : a.o b.o c.o e.o f.o d.o
+	g++ -o aa.out a.cpp
+a.o : a.cpp a.h b.o c.o
+	g++ -o a.o a.cpp
+b.o : b.cpp b.h
+	g++ -o b.o b.cpp
+c.o : c.cpp c.h b.o
+	g++ -o c.o c.cpp
+d.o : d.cpp d.h a.o e.o
+	g++ -o d.o d.cpp
+e.o : e.cpp e.h f.o
+	g++ -o e.o e.cpp
+f.o : f.cpp f.h
+	g++ -o f.o f.cpp
